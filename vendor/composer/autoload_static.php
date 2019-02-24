@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a
+class ComposerStaticInitf301c2e2fab79967920e77bde9035eda
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -1864,7 +1864,6 @@ class ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a
         'Google_Service_AndroidManagement_ListDevicesResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/ListDevicesResponse.php',
         'Google_Service_AndroidManagement_ListOperationsResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/ListOperationsResponse.php',
         'Google_Service_AndroidManagement_ListPoliciesResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/ListPoliciesResponse.php',
-        'Google_Service_AndroidManagement_ManagedConfigurationTemplate' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/ManagedConfigurationTemplate.php',
         'Google_Service_AndroidManagement_ManagedProperty' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/ManagedProperty.php',
         'Google_Service_AndroidManagement_ManagedPropertyEntry' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/ManagedPropertyEntry.php',
         'Google_Service_AndroidManagement_MemoryEvent' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/MemoryEvent.php',
@@ -1888,7 +1887,6 @@ class ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a
         'Google_Service_AndroidManagement_Resource_EnterprisesPolicies' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/Resource/EnterprisesPolicies.php',
         'Google_Service_AndroidManagement_Resource_EnterprisesWebTokens' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/Resource/EnterprisesWebTokens.php',
         'Google_Service_AndroidManagement_Resource_SignupUrls' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/Resource/SignupUrls.php',
-        'Google_Service_AndroidManagement_SigninDetail' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/SigninDetail.php',
         'Google_Service_AndroidManagement_SignupUrl' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/SignupUrl.php',
         'Google_Service_AndroidManagement_SoftwareInfo' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/SoftwareInfo.php',
         'Google_Service_AndroidManagement_Status' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidManagement/Status.php',
@@ -5096,12 +5094,10 @@ class ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a
         'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesResponse.php',
         'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1BatchUpdateIntentsResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1BatchUpdateIntentsResponse.php',
         'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1Context' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1Context.php',
-        'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1ConversationEvent' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1ConversationEvent.php',
         'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1EntityType' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1EntityType.php',
         'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1EntityTypeEntity' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1EntityTypeEntity.php',
         'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1EventInput' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1EventInput.php',
         'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1ExportAgentResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1ExportAgentResponse.php',
-        'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent.php',
         'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1Intent' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1Intent.php',
         'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo.php',
         'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1IntentMessage' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Dialogflow/GoogleCloudDialogflowV2beta1IntentMessage.php',
@@ -6314,8 +6310,6 @@ class ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a
         'Google_Service_Monitoring_Point' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Point.php',
         'Google_Service_Monitoring_Range' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Range.php',
         'Google_Service_Monitoring_ResourceGroup' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/ResourceGroup.php',
-        'Google_Service_Monitoring_Resource_MetricDescriptors' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Resource/MetricDescriptors.php',
-        'Google_Service_Monitoring_Resource_MonitoredResourceDescriptors' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Resource/MonitoredResourceDescriptors.php',
         'Google_Service_Monitoring_Resource_Projects' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Resource/Projects.php',
         'Google_Service_Monitoring_Resource_ProjectsAlertPolicies' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Resource/ProjectsAlertPolicies.php',
         'Google_Service_Monitoring_Resource_ProjectsCollectdTimeSeries' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Resource/ProjectsCollectdTimeSeries.php',
@@ -6327,7 +6321,6 @@ class ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a
         'Google_Service_Monitoring_Resource_ProjectsNotificationChannels' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Resource/ProjectsNotificationChannels.php',
         'Google_Service_Monitoring_Resource_ProjectsTimeSeries' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Resource/ProjectsTimeSeries.php',
         'Google_Service_Monitoring_Resource_ProjectsUptimeCheckConfigs' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Resource/ProjectsUptimeCheckConfigs.php',
-        'Google_Service_Monitoring_Resource_TimeSeries' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Resource/TimeSeries.php',
         'Google_Service_Monitoring_Resource_UptimeCheckIps' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/Resource/UptimeCheckIps.php',
         'Google_Service_Monitoring_SendNotificationChannelVerificationCodeRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/SendNotificationChannelVerificationCodeRequest.php',
         'Google_Service_Monitoring_SourceContext' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Monitoring/SourceContext.php',
@@ -10219,7 +10212,6 @@ class ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a
         'Laravel\\Socialite\\Two\\BitbucketProvider' => __DIR__ . '/..' . '/laravel/socialite/src/Two/BitbucketProvider.php',
         'Laravel\\Socialite\\Two\\FacebookProvider' => __DIR__ . '/..' . '/laravel/socialite/src/Two/FacebookProvider.php',
         'Laravel\\Socialite\\Two\\GithubProvider' => __DIR__ . '/..' . '/laravel/socialite/src/Two/GithubProvider.php',
-        'Laravel\\Socialite\\Two\\GitlabProvider' => __DIR__ . '/..' . '/laravel/socialite/src/Two/GitlabProvider.php',
         'Laravel\\Socialite\\Two\\GoogleProvider' => __DIR__ . '/..' . '/laravel/socialite/src/Two/GoogleProvider.php',
         'Laravel\\Socialite\\Two\\InvalidStateException' => __DIR__ . '/..' . '/laravel/socialite/src/Two/InvalidStateException.php',
         'Laravel\\Socialite\\Two\\LinkedInProvider' => __DIR__ . '/..' . '/laravel/socialite/src/Two/LinkedInProvider.php',
@@ -12388,11 +12380,11 @@ class ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit6966bd22868b4c2e4a59ee9ecb8fad3a::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf301c2e2fab79967920e77bde9035eda::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf301c2e2fab79967920e77bde9035eda::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitf301c2e2fab79967920e77bde9035eda::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf301c2e2fab79967920e77bde9035eda::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitf301c2e2fab79967920e77bde9035eda::$classMap;
 
         }, null, ClassLoader::class);
     }

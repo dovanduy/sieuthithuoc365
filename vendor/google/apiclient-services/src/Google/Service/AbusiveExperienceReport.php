@@ -19,7 +19,7 @@
  * Service definition for AbusiveExperienceReport (v1).
  *
  * <p>
- * Views Abusive Experience Report data, and gets a list of sites that have a
+ * View Abusive Experience Report data, and get a list of sites that have a
  * significant number of abusive experiences.</p>
  *
  * <p>

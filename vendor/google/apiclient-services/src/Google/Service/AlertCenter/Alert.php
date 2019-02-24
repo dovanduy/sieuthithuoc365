@@ -21,7 +21,6 @@ class Google_Service_AlertCenter_Alert extends Google_Model
   public $createTime;
   public $customerId;
   public $data;
-  public $deleted;
   public $endTime;
   public $securityInvestigationToolLink;
   public $source;
@@ -59,14 +58,6 @@ class Google_Service_AlertCenter_Alert extends Google_Model
   public function getData()
   {
     return $this->data;
-  }
-  public function setDeleted($deleted)
-  {
-    $this->deleted = $deleted;
-  }
-  public function getDeleted()
-  {
-    return $this->deleted;
   }
   public function setEndTime($endTime)
   {

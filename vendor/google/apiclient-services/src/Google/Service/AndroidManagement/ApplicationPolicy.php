@@ -24,8 +24,6 @@ class Google_Service_AndroidManagement_ApplicationPolicy extends Google_Collecti
   public $installType;
   public $lockTaskAllowed;
   public $managedConfiguration;
-  protected $managedConfigurationTemplateType = 'Google_Service_AndroidManagement_ManagedConfigurationTemplate';
-  protected $managedConfigurationTemplateDataType = '';
   public $minimumVersionCode;
   public $packageName;
   protected $permissionGrantsType = 'Google_Service_AndroidManagement_PermissionGrant';
@@ -78,20 +76,6 @@ class Google_Service_AndroidManagement_ApplicationPolicy extends Google_Collecti
   public function getManagedConfiguration()
   {
     return $this->managedConfiguration;
-  }
-  /**
-   * @param Google_Service_AndroidManagement_ManagedConfigurationTemplate
-   */
-  public function setManagedConfigurationTemplate(Google_Service_AndroidManagement_ManagedConfigurationTemplate $managedConfigurationTemplate)
-  {
-    $this->managedConfigurationTemplate = $managedConfigurationTemplate;
-  }
-  /**
-   * @return Google_Service_AndroidManagement_ManagedConfigurationTemplate
-   */
-  public function getManagedConfigurationTemplate()
-  {
-    return $this->managedConfigurationTemplate;
   }
   public function setMinimumVersionCode($minimumVersionCode)
   {

@@ -37,7 +37,6 @@ class Google_Service_Bigquery_Table extends Google_Model
   protected $modelDataType = '';
   public $numBytes;
   public $numLongTermBytes;
-  public $numPhysicalBytes;
   public $numRows;
   protected $schemaType = 'Google_Service_Bigquery_TableSchema';
   protected $schemaDataType = '';
@@ -203,14 +202,6 @@ class Google_Service_Bigquery_Table extends Google_Model
   public function getNumLongTermBytes()
   {
     return $this->numLongTermBytes;
-  }
-  public function setNumPhysicalBytes($numPhysicalBytes)
-  {
-    $this->numPhysicalBytes = $numPhysicalBytes;
-  }
-  public function getNumPhysicalBytes()
-  {
-    return $this->numPhysicalBytes;
   }
   public function setNumRows($numRows)
   {

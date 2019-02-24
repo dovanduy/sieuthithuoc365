@@ -19,7 +19,7 @@
  * Service definition for IAMCredentials (v1).
  *
  * <p>
- * Creates short-lived, limited-privilege credentials for IAM service accounts.</p>
+ * IAM Service Account Credentials API</p>
  *
  * <p>
  * For more information about this service, see the API

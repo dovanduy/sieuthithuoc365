@@ -29,7 +29,6 @@ class Google_Service_CloudBuild_BuildOptions extends Google_Collection
   public $substitutionOption;
   protected $volumesType = 'Google_Service_CloudBuild_Volume';
   protected $volumesDataType = 'array';
-  public $workerPool;
 
   public function setDiskSizeGb($diskSizeGb)
   {
@@ -116,13 +115,5 @@ class Google_Service_CloudBuild_BuildOptions extends Google_Collection
   public function getVolumes()
   {
     return $this->volumes;
-  }
-  public function setWorkerPool($workerPool)
-  {
-    $this->workerPool = $workerPool;
-  }
-  public function getWorkerPool()
-  {
-    return $this->workerPool;
   }
 }

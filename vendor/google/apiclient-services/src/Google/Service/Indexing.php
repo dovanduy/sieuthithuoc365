@@ -19,7 +19,8 @@
  * Service definition for Indexing (v3).
  *
  * <p>
- * Notifies Google when your web pages change.</p>
+ * The Indexing API allows developers to share the life cycle of a Web Document
+ * with Google.</p>
  *
  * <p>
  * For more information about this service, see the API

@@ -474,17 +474,17 @@
     },
     {
         "name": "google/apiclient-services",
-        "version": "v0.73",
-        "version_normalized": "0.73.0.0",
+        "version": "v0.72",
+        "version_normalized": "0.72.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/googleapis/google-api-php-client-services.git",
-            "reference": "df35c41d842f5167654e8f38343a21bfe277aeda"
+            "reference": "e8c6b72963b19e707b8a6c46fe3515207bb03bd2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/df35c41d842f5167654e8f38343a21bfe277aeda",
-            "reference": "df35c41d842f5167654e8f38343a21bfe277aeda",
+            "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/e8c6b72963b19e707b8a6c46fe3515207bb03bd2",
+            "reference": "e8c6b72963b19e707b8a6c46fe3515207bb03bd2",
             "shasum": ""
         },
         "require": {
@@ -493,7 +493,7 @@
         "require-dev": {
             "phpunit/phpunit": "~4.8"
         },
-        "time": "2018-10-20T00:22:35+00:00",
+        "time": "2018-10-13T00:23:17+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -1260,17 +1260,17 @@
     },
     {
         "name": "laravel/socialite",
-        "version": "v3.2.0",
-        "version_normalized": "3.2.0.0",
+        "version": "v3.1.1",
+        "version_normalized": "3.1.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/socialite.git",
-            "reference": "7194c0cd9fb2ce449669252b8ec316b85b7de481"
+            "reference": "65f771ff4f266ebae23de1a3f18efd80a1da2f8d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/socialite/zipball/7194c0cd9fb2ce449669252b8ec316b85b7de481",
-            "reference": "7194c0cd9fb2ce449669252b8ec316b85b7de481",
+            "url": "https://api.github.com/repos/laravel/socialite/zipball/65f771ff4f266ebae23de1a3f18efd80a1da2f8d",
+            "reference": "65f771ff4f266ebae23de1a3f18efd80a1da2f8d",
             "shasum": ""
         },
         "require": {
@@ -1285,7 +1285,7 @@
             "mockery/mockery": "~0.9",
             "phpunit/phpunit": "~4.0|~5.0"
         },
-        "time": "2018-10-18T03:39:04+00:00",
+        "time": "2018-08-16T12:51:21+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
