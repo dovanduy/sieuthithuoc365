@@ -195,7 +195,7 @@
                             </table>
                         </div>
                         <div class="col-12 col-md-12">
-                            <p class="lastText">Quý khách vui lòng điền mã nội dung sau: <span class="red">#{{ $orderId }} - thuocuytin.com.vn</span> trong
+                            <p class="lastText">Quý khách vui lòng điền mã nội dung sau: <span class="red">#{{ $orderId }} - sieuthithuoc365.com</span> trong
                                 phần nội dung chuyển khoản để chúng tôi xác nhận đơn hàng.</p>
                         </div>
                     </div>

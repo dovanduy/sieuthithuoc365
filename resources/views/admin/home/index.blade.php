@@ -48,7 +48,7 @@
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a href="https://thuocuytin.com.vn/admin/users" class="small-box-footer">Xem thêm <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="https://sieuthithuoc365.com/admin/users" class="small-box-footer">Xem thêm <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -63,7 +63,7 @@
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
-                    <a href="https://thuocuytin.com.vn/admin/don-hang" class="small-box-footer">Xem thêm <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="https://sieuthithuoc365.com/admin/don-hang" class="small-box-footer">Xem thêm <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->

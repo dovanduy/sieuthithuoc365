@@ -289,15 +289,15 @@
                                 Hotline: {{ isset($information['hotline']) ? $information['hotline'] : '' }}<br> <span>(Tư vấn miễn phí - Thời gian: 24/24h)</span>
                             </p>
                             <p>
-    <img src="https://thuocuytin.com.vn/public/library/images/danhmucsp/icon/icon-accept-16.png"><span style="font-size: 14px;
+    <img src="https://sieuthithuoc365.com/public/library/images/danhmucsp/icon/icon-accept-16.png"><span style="font-size: 14px;
     font-weight: bold;"> Tư vấn 1 - 1 cùng dược sỹ 24/7</span><br>
-    <img src="https://thuocuytin.com.vn/public/library/images/danhmucsp/icon/icon-accept-16.png"><span style="
+    <img src="https://sieuthithuoc365.com/public/library/images/danhmucsp/icon/icon-accept-16.png"><span style="
     font-size: 14px;
     font-weight: bold;"> Đổi trả trong vòng 7 ngày</span><br>
-    <img src="https://thuocuytin.com.vn/public/library/images/danhmucsp/icon/icon-accept-16.png"><span style="
+    <img src="https://sieuthithuoc365.com/public/library/images/danhmucsp/icon/icon-accept-16.png"><span style="
     font-size: 14px;
     font-weight: bold;"> Miễn phí vận chuyển với đơn hàng 500K</span><br>
-    <img src="https://thuocuytin.com.vn/public/library/images/danhmucsp/icon/icon-accept-16.png"><span style="
+    <img src="https://sieuthithuoc365.com/public/library/images/danhmucsp/icon/icon-accept-16.png"><span style="
     font-size: 14px;
     font-weight: bold;"> Kiểm tra hàng trước khi thanh toán</span><br>
 </p>
