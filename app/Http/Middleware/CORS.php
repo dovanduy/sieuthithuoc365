@@ -15,7 +15,7 @@ class CORS {
     {
 
         return $next($request)
-          ->header('Access-Control-Allow-Origin', '*')
+          ->header('Access-Control-Allow-Origin', 'https://www.w3schools.com')
           ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     }
 
