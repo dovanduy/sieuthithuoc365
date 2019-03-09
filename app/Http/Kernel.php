@@ -51,7 +51,7 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         //other middlewares
-        'cors' => 'App\Http\Middleware\CORS',
+        'cors' => \App\Http\Middleware\CORS::class,
         'admin' => \Illuminate\Auth\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
