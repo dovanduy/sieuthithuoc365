@@ -17,6 +17,8 @@ use Illuminate\Http\Request;
 //    return $request->user();
 // });
 
-Route::middleware('cors')->group(function(){
-   Route::post('contact-submit','OysterGoldController@contactSubmit');
-});
+// Route::middleware('cors')->group(function(){
+//    Route::post('contact-submit','OysterGoldController@contactSubmit');
+// });
+
+Route::post('contact-submit','OysterGoldController@contactSubmit');
