@@ -29,8 +29,9 @@ class CommentController extends AdminController
                 'comments.content',
                 'users.name',
                 'comments.comment_id',
+                'comments.ip_customer',
                 'comments.rating'
-            );
+            )->orderBy('comments.comment_id', 'desc');
 
         return Datatables::of($comments)
             ->addColumn('action', function($comment) {

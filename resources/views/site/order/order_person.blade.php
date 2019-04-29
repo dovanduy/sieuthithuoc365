@@ -71,6 +71,7 @@
                                                     case 3: echo '<label class="label label-danger">Đang vận chuyển</label>
                                                          <a class="btn btn-success" target="_blank" href="https://buucuc.com/tracking?vid='. $order->shipping_code . '">Tra cứu vận đơn</a>'  ;break;
                                                     case 4: echo '<label class="btn btn-success">Đã giao hàng</label>';break;
+                                                    case 5: echo '<label class="btn btn-danger">Đơn chuyển hoàn</label>';break;
                                                 }?>
                                             
                                             </div>

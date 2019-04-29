@@ -101,8 +101,7 @@
                                         </td>
                                         <td>
                                             <div class="content">
-                                                <h3><a href="{{ route('product', ['post_slug' => $orderItem->slug]) }}">{{ $orderItem->title }}-{{$orderItem->color}}-{{ $orderItem->size }}</a></h3>
-
+                                                <h3><a href="{{ route('product', ['post_slug' => $orderItem->slug]) }}">{{ $orderItem->title }}</a></h3>
                                                 <p class="price">
                                                     @if (time() <strtotime($orderItem->deal_end))
                                                         <span class="discont">Giá : <del>{{ number_format($orderItem->price , 0) }} đ</del>

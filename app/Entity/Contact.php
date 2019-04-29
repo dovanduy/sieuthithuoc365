@@ -29,6 +29,7 @@ class Contact extends Model
         'phone',
         'email',
         'address',
+        'ip_customer',
         'message',
         'images',
         'status',

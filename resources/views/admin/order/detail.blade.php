@@ -142,9 +142,11 @@
                         <h3 class="box-title">Ghi Chú Đơn Hàng</h3>
                     </div>
                     <div class="box-body">
-                        <form action="{{ route('orderUpdateStatus') }}" method="post">
+                         <form action="{{ route('orderUpdateStatus') }}" method="post">
                             {!! csrf_field() !!}
-                            <select name="status" class="
+                            <div class="form-group">
+                                <label>Trạng thái đơn hàng  : </label>
+                                <select name="status" class="
                                 <?php switch ($order->status) {
                                 case 1:
                                     echo 'btn-info';
@@ -158,8 +160,11 @@
                                 case 4:
                                     echo 'btn-success';
                                     break;
+                                case 5:
+                                    echo 'btn-danger';
+                                    break;    
                             }?>" >
-								<option value="0"
+                                <option value="0"
                                         class="btn-danger clearfix" {{ ($order->status==0) ? 'selected' : ''}}>
                                     Hủy đơn hàng
                                 </option>
@@ -179,7 +184,42 @@
                                         class="btn-success clearfix" {{ ($order->status==4) ? 'selected' : ''}}>
                                     Đã giao hàng
                                 </option>
+                                <option value="5"
+                                        class="btn-success clearfix" {{ ($order->status==5) ? 'selected' : ''}}>
+                                    Đơn chuyển hoàn
+                                </option>
                             </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nguồn đơn hàng  : </label>
+                                <select name="order_source" class="
+                                <?php switch ($order->order_source) {
+                                case 0:
+                                    echo 'btn-info';
+                                    break;
+                                case 1:
+                                    echo 'btn-success';
+                                    break;
+                                case 2:
+                                    echo 'btn-warning';
+                                    break;   
+                            }?>" >
+                                <option value="0"
+                                        class="btn-info clearfix" {{ ($order->order_source==0) ? 'selected' : ''}}>
+                                    Đơn Thuốc uy tín
+                                </option>
+                                <option value="1"
+                                        class="btn-success clearfix" {{ ($order->order_source==1) ? 'selected' : ''}}>
+                                    Đơn Shopee
+                                </option>
+                                <option value="2"
+                                        class="btn-warning clearfix" {{ ($order->order_source==2) ? 'selected' : ''}}>
+                                    Đơn Blumed
+                                </option>
+                            </select>
+                            </div>
+                            
                             <div class="form-group">
                                 <label for="noteAdmin">Thông báo cho khách hàng</label>
                                 <input type="checkbox" name="is_mail_customer" value="1"

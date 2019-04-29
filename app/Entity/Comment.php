@@ -34,6 +34,7 @@ class Comment extends Model
         'customer_email',
         'customer_phone',
         'deleted_at',
+        'ip_customer',
         'rating',
         'updated_at'
     ];

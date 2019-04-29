@@ -23,7 +23,11 @@
 	   <del>{{ number_format( $product['price'] , 0) }} đ   </del>         
 	   </p>
 	@else
-	  <p class="price">{{ number_format( $product['price'] , 0) }} đ</p>
+	  @if($product['price'] > 0)
+        <div class="price">{{ number_format( $product['price'] , 0) }} đ</div>
+      @else
+        <div class="price">Giá : Liên hệ</div>
+      @endif 
 	  <p>
 	  	 <del style="color: #fff">0</del>       
 	  </p>

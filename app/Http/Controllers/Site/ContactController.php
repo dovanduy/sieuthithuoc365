@@ -14,6 +14,7 @@ use App\Entity\Input;
 use App\Entity\MailConfig;
 use App\Entity\Post;
 use App\Mail\Mail;
+use App\Ultility\Ultility;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Validator;
@@ -50,12 +51,35 @@ class ContactController extends SiteController
 		 
         //success
         $contact = new Contact();
+
+        $name = $request->input('name');
+        $name = str_replace("<","",$name);
+        $name = str_replace(">","",$name);
+        $name = str_replace(";","",$name);
+        $phone = $request->input('phone');
+        $phone = str_replace("<","",$phone);
+        $phone = str_replace(">","",$phone);
+        $phone = str_replace(";","",$phone);
+        $email = $request->input('email');
+        $email = str_replace("<","",$email);
+        $email = str_replace(">","",$email);
+        $email = str_replace(";","",$email);
+        $address = $request->input('address');
+        $address = str_replace("<","",$address);
+        $address = str_replace(">","",$address);
+        $address = str_replace(";","",$address);
+        $message = $request->input('message');
+        $message = str_replace("<","",$message);
+        $message = str_replace(">","",$message);
+        $message = str_replace(";","",$message);        
+
         $contact->insert([
-            'name' => $request->input('name'),
-            'phone' => $request->input('phone'),
-            'email' => $request->input('email'),
-            'address' => $request->input('address'),
-            'message' => $request->input('message'),
+            'name' => $name,
+            'phone' => $phone,
+            'email' => $email,
+            'address' => $address,
+            'message' => $message,
+            'ip_customer' => Ultility::get_client_ip(),
 			'images' => $request->has('images') ? implode('-', $request->input('images')) : '',
             'created_at' => new \DateTime(),
             'updated_at' => new \DateTime()

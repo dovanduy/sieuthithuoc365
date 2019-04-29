@@ -31,7 +31,7 @@
                      </div>
                </div>
                <div class="col-md-3 fanpages">
-                  <div class="row">
+                  <div class="">
                      <div class="footer_r clearfix ">
                   <p class="tit_2 col-xs-12">Liên kết Facebook</p>
                   <div class="block-fanpage ">

@@ -15,6 +15,7 @@ use App\Entity\OrderItem;
 use App\Entity\Post;
 use App\Entity\Product;
 use App\Entity\User;
+use App\Ultility\Ultility;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -36,6 +37,10 @@ class CommentController extends SiteController
          $userId = $request->input('user_id');
          $commentId = $request->input('comment_id');
 
+         // ignore xss
+        $message = str_replace("<","",$message);
+        $message = str_replace(">","",$message);
+        $message = str_replace(";"," ",$message);
 
          // luu comment
          $commentModel = new Comment();
@@ -59,6 +64,7 @@ class CommentController extends SiteController
              'post_id' => $postId,
              'parent' => $parent,
              'content' => $message,
+             'ip_customer' => Ultility::get_client_ip(),
              'user_id' => $userId,
              'created_at' => date("y/m/d"),
          ]);
@@ -101,6 +107,10 @@ class CommentController extends SiteController
     public function edit(Request $request) {
         $commentId = $request->input('comment_id');
         $message = $request->input('message');
+
+        $message = str_replace("<","",$message);
+        $message = str_replace(">","",$message);
+        $message = str_replace(";","",$message);
 
         Comment::where('comment_id', $commentId)->update([
             'content' => $message,

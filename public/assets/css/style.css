@@ -7461,7 +7461,7 @@ body {
 .CropImg {
 	width: 100%;
 	position: relative;
-	z-index: 1;
+	z-index: 0;
 }
 .CropImg .thumbs {
 	overflow: hidden;
@@ -8015,7 +8015,7 @@ footer .get_news form div input {
 		display: none;
 		width: 100%;
 		float: left;
-		padding: 0 7px;
+		padding: 0 10px;
 		position: absolute;
 		top: 50px;
 		z-index: 5;

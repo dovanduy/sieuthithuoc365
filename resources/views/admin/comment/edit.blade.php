@@ -65,7 +65,11 @@
                                 <textarea class="form-control" rows="4" placeholder="Nội dung comment" required name="content">{!! $comment->content !!}</textarea>
                             </div>
 
-
+                             <div class="form-group">
+                                <label for="exampleInputEmail1">Ip Khách</label>
+                                {!! $comment->ip_customer !!}
+                            </div>
+                                
                             <div class="form-group" style="color: red;">
                                 @if ($errors->has('content'))
                                     <label for="exampleInputEmail1">{{ $errors->first('title') }}</label>

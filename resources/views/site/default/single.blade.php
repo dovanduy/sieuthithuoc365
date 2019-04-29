@@ -66,31 +66,44 @@
             </div>
             <!--end: #news-detail-->
 
-            <div class="other-news">
-                <div class="common-heading">
-                    <span>Bài viết liên quan</span>
-                </div>
-                <!--end: .common-heading-->
-                <div class="list-thumb">
-                    @foreach(\App\Entity\Post::relativeProduct($post->slug,4) as $post)
-                    <div class="item col-md-3 col-sm-6 col-xs-12 ">
-						<div class="CropImg CropImg70">
-                        <a class="thumbs" href="{{ route('post', ['cate_slug' => $category->slug, 'post_slug' => $post->slug]) }}" title="{{ isset($post['title']) ? $post['title'] : ''}}">
-                            <img src="{{ isset($post['image']) ? $post['image'] : ''}}" alt="{{ isset($post['title']) ? $post['title'] : ''}}" />
-                        </a>
-						</div>
-                        <div class="inf_new">
-                            <h2 class="heading"><a href="{{ route('post', ['cate_slug' => $category->slug, 'post_slug' => $post->slug]) }}" title="{{ isset($post['title']) ? $post['title'] : ''}}">{{ isset($post['title']) ? $post['title'] : ''}}</a></h2>
-                            <div class="date"><?php 
-							 $date=date_create($post['updated_at']);
-							 echo date_format($date,"Y/m/d");
-							 ?> </div>
-                            <p class="sumary">{{ isset($post['description']) ? \App\Ultility\Ultility::textLimit($post['description'], 20) : '' }} </p>
-                        </div>
-
-                    </div>
+             <div>
+             @foreach (\App\Entity\Menu::showWithLocation('show-category-new') as $Mainmenu)
+               @foreach (\App\Entity\MenuElement::showMenuPageArray($Mainmenu->slug) as $id=>$menuelement)
+                     <?php $urlscate = explode('/', $menuelement['url']); ?>
+                     <?php $cateTour = \App\Entity\Category::getDetailCategory($urlscate[2]); ?>
+             <style>
+                 .block-news-succes_story_ct #story_heading{{$id}} >a:before {
+                     border-left-color: {{ $cateTour['backgruod-icon'] }};
+                     background: {{ $cateTour['backgruod-icon'] }} url(../images/icon_title.png) no-repeat 10px;
+                 }
+                 .block-news-succes_story_ct #story_heading{{$id}} {
+                     background: {{ $cateTour['backgruod-title'] }};
+                 }
+                 .block-news-succes_story_ct #story_heading{{$id}} >a:after {
+                     border-left-color: {{ $cateTour['backgruod-title'] }};
+                 }
+             </style>
+             
+            <div class="block-news block-news-succes_story_ct clearfix" style="float:none;margin-bottom:15px;">
+               <div class="block-news-heading story_heading clearfix" id="story_heading{{$id}}">
+                  <a class="selected" title="{{ $menuelement['title_show'] }}" href="{{ $menuelement['url'] }}">{{ $menuelement['title_show'] }}</a>
+                   <i class="icon_title" style="background:{{  isset( $cateTour['backgruod-icon']) ? $cateTour['backgruod-icon'] : '#0073ad' }}"></i>
+               </div>
+               <!--end: .block-news-title-->
+               <div class="block-news-content clearfix">
+                  <div class="owl-carousel-story  owl-theme">
+                    <?php $urls = explode('/', $menuelement['url']) ?>
+                    @foreach(\App\Entity\Post::categoryShow($urls[2],15) as $post)
+                        @php $category = \App\Entity\Category::getDetailCategory($urls[2]); @endphp
+                         @include('site.partials.itemnew')
                     @endforeach
-                </div>
+                  </div>
+               </div>
+               <!--end: .list-->
+            </div>
+             @endforeach
+            @endforeach
+            <!--end: .block-news-content-->
                 <!--end: .list-thumb-->
             </div>
 

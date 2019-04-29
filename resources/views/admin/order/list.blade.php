@@ -57,6 +57,52 @@
                                            name="search_start_end"/>
                                 </div>
                             </div>
+
+                             <div class="form-group col-xs-12 col-md-6">
+                                <label class="control-label">Trạng thái đơn hàng</label>
+                                <select name="status">
+                                    <option value="-1">
+                                        Chọn
+                                    </option>
+                                    <option  value="1">
+                                        Hủy đơn hàng
+                                    </option>
+                                    <option value="2">
+                                        Đã đặt đơn hàng
+                                    </option>
+                                    <option value="3">
+                                        Đã nhận đơn hàng
+                                    </option>
+                                    <option value="4">
+                                        Đang vận chuyển
+                                    </option>
+                                    <option value="5">
+                                        Đã giao hàng
+                                    </option>
+                                    <option value="6">
+                                        Đơn chuyển hoàn
+                                    </option>
+                                </select>
+                            </div>
+
+                              <div class="form-group col-xs-12 col-md-6">
+                                <label class="control-label">Nguồn đơn hàng</label>
+                                <select name="order_source">
+                                    <option value="-1">
+                                        Chọn
+                                    </option>
+                                    <option value="1">
+                                        Đơn Thuốc uy tín
+                                    </option>
+                                    <option value="2">
+                                        Đơn Shopee
+                                    </option>
+                                    <option value="3">
+                                        Đơn blumed
+                                    </option>
+                                </select>
+                            </div>
+
                             <div class="form-group col-xs-6 col-md-3">
                                 <label class="control-label">Đã hoàn gốc</label>
                                 <input type="checkbox" name="is_redeem_origin" value="1"
@@ -96,15 +142,15 @@
                                 <th>Địa chỉ</th>
                                 <th>Ngày đặt hàng</th>
                                 <th>Trạng thái</th>
-                                <th width="20%">Ghi chú (nếu có)</th>
+                                <th width="20%">Sản phẩm</th>
                                 <th width="10%">Thao tác</th>
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach($orders as $id => $order)
-                                    <?php $sumPrice = 0;?>
+                                 @foreach($orders as $id => $order)
+                                    <?php $productCode = '';?>
                                     @foreach($order->orderItems as $idx => $orderItem)
-                                        <?php $sumPrice += $orderItem->cost*$orderItem->quantity ?>
+                                        <?php $productCode .= $orderItem->title . '; '?>
                                     @endforeach
 
                                     <tr>
@@ -118,34 +164,36 @@
                                         </td>
                                         <td>
                                             <p>{{ $order->shipping_address }}</p>
-
                                         </td>
                                         <td>
                                             <?php $dateOrder = new \DateTime($order->created_at); echo $dateOrder->format('d/m/Y H:i'); ?>
                                         </td>
-										<td>
+                                        <td>
                                             @php 
-												switch ($order->status) {
-													case 0:
-														echo "Hủy đơn hàng";
-														break;
-													case 1:
-														echo "Đã đặt đơn hàng";
-														break;
-													case 2:
-														echo "Đã nhận đơn hàng";
-														break;
-													case 3:
-														echo "Đang vận chuyển";
-														break;
-													case 4:
-														echo "Đã giao hàng";
-														break;	
-												}
-											@endphp
+                                                switch ($order->status) {
+                                                    case 0:
+                                                        echo "Hủy đơn hàng";
+                                                        break;
+                                                    case 1:
+                                                        echo "Đã đặt đơn hàng";
+                                                        break;
+                                                    case 2:
+                                                        echo "Đã nhận đơn hàng";
+                                                        break;
+                                                    case 3:
+                                                        echo "Đang vận chuyển";
+                                                        break;
+                                                    case 4:
+                                                        echo "Đã giao hàng";
+                                                        break;  
+                                                    case 5:
+                                                        echo "Đơn chuyển hoàn";
+                                                        break;      
+                                                }
+                                            @endphp
                                         </td>
                                         <td>
-                                            <p>{{ $order->shipping_note }}</p>
+                                            <p>{{ $productCode }}</p>
                                         </td>
                                         <td>
                                             <a href="{{ route('orderAdmin.show', ['order_id' => $order->order_id]) }}">

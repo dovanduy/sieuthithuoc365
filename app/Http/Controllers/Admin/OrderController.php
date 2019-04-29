@@ -307,6 +307,15 @@ class OrderController extends AdminController
             if (!empty($request->input('user_id'))) {
                 $orders = $orders->where('user_id', '=', $request->input('user_id'));
             }
+            if (!empty($request->input('status')) && $request->input('status') >= 0) {
+                $status = $request->input('status') - 1;
+                $orders = $orders->where('status', '=', $status);
+                   
+            }
+            if (!empty($request->input('order_source')) && $request->input('order_source') >= 0) {
+                $orderSource = $request->input('order_source') - 1;
+                $orders = $orders->where('order_source', '=', $orderSource);
+            }
             if (!empty($request->input('is_shared_profit'))) {
                 $orders = $orders->where('is_shared_profit', '=', 1);
             }
@@ -334,7 +343,9 @@ class OrderController extends AdminController
 
             $orderShips = OrderShip::get();
 
-            $orders = $orders->paginate(20);
+            $orders = $orders->paginate(50);
+            $orders->appends(['status' => $request->input('status')]);
+            $orders->appends(['order_source' => $request->input('order_source')]);
             $orders->appends(['is_redeem_origin' => $request->input('is_redeem_origin')]);
             $orders->appends(['is_not_redeem_origin' => $request->input('is_not_redeem_origin')]);
             $orders->appends(['is_shared_profit' => $request->input('is_shared_profit')]);
@@ -415,12 +426,14 @@ class OrderController extends AdminController
             $orderId = $request->input('order_id');
             $status = $request->input('status');
             $noteAdmin = $request->input('noteAdmin');
+            $orderSource = $request->input('order_source');
             $shippingCode = $request->input('shipping_code');
             $order = Order::where('order_id', $orderId)->first();
 
             $order->update([
                 'status' => $status,
                 'note_admin' => $noteAdmin,
+                'order_source' => $orderSource,
                 'cost_ship' => $request->input('cost_ship'),
                 'shipping_code' => $shippingCode,
                 'is_mail_customer' => $request->has('is_mail_customer') ? 1 : 0,

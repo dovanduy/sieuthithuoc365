@@ -53,6 +53,11 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="exampleInputEmail1">Ip Khách</label>
+                                {{ $contact->ip_customer }}
+                            </div>
+
+                            <div class="form-group">
                                 <label for="exampleInputEmail1">Trạng thái</label>
                                 <select class="form-control" name="status">
                                     <option value="1" {{ $contact->status==1 ? 'selected' : '' }}>Đã tư vấn</option>

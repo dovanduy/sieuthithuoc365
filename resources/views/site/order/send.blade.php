@@ -94,12 +94,12 @@
                                 @foreach($orderItems as $id => $orderItem)
                                     <tr>
                                         <td >
-                                            <a href="{{ route('post', ['cate_slug' => 'san-pham', 'post_slug' => $orderItem->slug]) }}">
+                                            <a href="{{ route('product', ['post_slug' => $orderItem->slug]) }}">
                                                 <img src="{{ !empty($orderItem->image) ?  asset($orderItem->image) : asset('/site/img/no-image.png') }}" alt="{{ $orderItem->title }}" width="50"> </a>
                                         </td>
                                         <td>
                                             <div class="content">
-                                                <p><a href="{{ route('post', ['cate_slug' => 'san-pham', 'post_slug' => $orderItem->slug]) }}">{{ $orderItem->title }}-{{$orderItem->color}}-{{ $orderItem->size }}</a></p>
+                                                <p><a href="{{ route('product', ['post_slug' => $orderItem->slug]) }}">{{ $orderItem->title }}</a></p>
                                                 <p>Thông số: {{ $orderItem->properties }}</p>
                                                 <p class="price">
                                                     @if (time() <= strtotime($orderItem->deal_end))

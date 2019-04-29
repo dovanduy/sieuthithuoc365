@@ -286,7 +286,7 @@
 
                                     @if(!in_array($typeInput->type_input, array('one_line', 'multi_line', 'image', 'editor'), true))
                                         <select name="{{$typeInput->slug}}" class="form-control">
-                                            @foreach(\App\Entity\SubPost::showSubPost($typeInput->type_input, 100) as $subPost)
+                                            @foreach(\App\Entity\SubPost::showSubPost($typeInput->type_input, 1000) as $subPost)
                                                 <option value="{{ $subPost->title }}"
                                                 @if($post[$typeInput->slug] == $subPost->title) selected @endif>
                                                     {{ $subPost->title }}</option>

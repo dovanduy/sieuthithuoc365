@@ -245,28 +245,45 @@ class OrderController extends SiteController
            $costShip = $request->input('customer_ship');
            // hình thức thanh toán
            $methodPayment = $request->input('method_payment', '');
+
+          $shipName = $request->input('ship_name');
+          $shipName = str_replace("<","",$shipName);
+          $shipName = str_replace(">","",$shipName);
+          $shipName = str_replace(";","",$shipName);  
+          $shipEmail = $request->input('ship_email');
+          $shipEmail = str_replace("<","",$shipEmail);
+          $shipEmail = str_replace(">","",$shipEmail);
+          $shipEmail = str_replace(";","",$shipEmail);  
+          $shipPhone = $request->input('ship_phone');
+          $shipPhone = str_replace("<","",$shipPhone);
+          $shipPhone = str_replace(">","",$shipPhone);
+          $shipPhone = str_replace(";","",$shipPhone);   
+          $shipAddress = $request->input('ship_address');
+          $shipAddress = str_replace("<","",$shipAddress);
+          $shipAddress = str_replace(">","",$shipAddress);
+          $shipAddress = str_replace(";","",$shipAddress);  
+
            // information customer
            $customer = [
-               'ship_name' => $request->input('ship_name'),
-               'ship_email' => $request->input('ship_email'),
-               'ship_phone' => $request->input('ship_phone'),
-               'ship_address' => $request->input('ship_address'),
+               'ship_name' => $shipName,
+               'ship_email' => $shipEmail,
+               'ship_phone' => $shipPhone,
+               'ship_address' => $shipAddress,
            ];
            // thêm mới thông tin đơn hàng.
            if(Auth::check()) {
                $userId = Auth::user()->id;
            } else {
                $userModel = new User();
-               $userWithPhone = $userModel->where('phone', $request->input('ship_phone'))
+               $userWithPhone = $userModel->where('phone', $shipPhone)
                    ->orWhere('email',  $request->input('ship_address'))->first();
 
                if (empty($userWithPhone)) {
                    $user = $userModel->create([
-                       'name' => $request->input('ship_name'),
-                       'email' => empty($request->input('ship_email')) ? $request->input('ship_phone') : $request->input('ship_email') ,
-                       'phone' => $request->input('ship_phone'),
-                       'address' => $request->input('ship_address'),
-                       'password' => bcrypt($request->input('ship_phone')),
+                       'name' => $shipName,
+                       'email' => empty($request->input('ship_email')) ? $shipPhone : $shipEmail ,
+                       'phone' => $shipPhone,
+                       'address' => $shipAddress,
                        'role' => 1,
                    ]);
 
@@ -278,10 +295,10 @@ class OrderController extends SiteController
            $order = new Order();
            $orderId = $order->insertGetId([
                'status' => '1', // trang thai đặt hàng thành công
-               'shipping_name' => $request->input('ship_name'),
-               'shipping_email' => $request->input('ship_email'),
-               'shipping_phone' => $request->input('ship_phone'),
-               'shipping_address' => $request->input('ship_address'),
+               'shipping_name' => $shipName,
+               'shipping_email' => $shipEmail,
+               'shipping_phone' => $shipPhone,
+               'shipping_address' => $shipAddress,
                'total_price' => ($totalPrice + $costShip - $codeSalePrice - $pointGive),
                'method_payment' =>  $methodPayment,
                'customer_ship' => $costShip,

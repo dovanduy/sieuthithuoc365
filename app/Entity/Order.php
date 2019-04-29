@@ -48,6 +48,7 @@ class Order extends Model
         'cost_sale',
         'ip_customer',
         'note_admin',
+        'order_source',
         'is_mail_customer',
         'visiable',
         'deleted_at',
