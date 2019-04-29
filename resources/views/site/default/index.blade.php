@@ -26,7 +26,7 @@
       <div class="wrapper">
          <section id="content">
             <!-- KHUYEN MAI DAC BIET -->
-             @include('site.partials.khuyenmai')
+             <!-- @include('site.partials.khuyenmai') -->
              <div class="clearfix"></div>
             <div id="block-60" class="block-banner block-banner-default mbds-block " style="float:none;">
                <div class="row">
